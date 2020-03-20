@@ -41,10 +41,15 @@ h1 {
     top: 5%;
 }
 
-header, .header {
+header {
     grid-column: 2 / 4;
     grid-row: 1;
     z-index: 0;
+}
+
+.catherinedoes {
+    grid-column: 2 / 4;
+    grid-row: 1;
 }
 
 a {
@@ -70,4 +75,20 @@ nav a {
     grid-column: 3 / 4;
     grid-row: 1;
     z-index: 0;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: [col] 1fr [col] 2fr [col] 1fr [col];
+    grid-template-rows: 1fr;
+}
+
+.section {
+    grid-column: col 1 / col 4;
+}
+
+.left img  {
+    grid-column: col 1;
+}
+
+.right img {
+    grid-column: col 3;
 }
