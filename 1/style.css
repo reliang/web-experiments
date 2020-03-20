@@ -77,18 +77,44 @@ nav a {
     z-index: 0;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: [col] 1fr [col] 2fr [col] 1fr [col];
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
 
 .section {
-    grid-column: col 1 / col 4;
+    grid-column: 1;
 }
 
-.left img  {
-    grid-column: col 1;
+.set {
+    margin-right: 100px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 5fr 6fr 5fr;
+    grid-template-rows: 1fr;
 }
 
-.right img {
-    grid-column: col 3;
+.set img.left {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    align-self: start;
+}
+
+.set div {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+}
+
+.set div h2 {
+    margin-block-start: 0em;
+}
+
+.set img.right {
+    grid-column: 3;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    align-self: end;
 }
