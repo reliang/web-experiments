@@ -18,6 +18,10 @@ h1 {
     z-index: 0;
 }
 
+#does {
+    display: inline;
+}
+
 #design h1 {
     background-color: yellow;
 }
@@ -32,7 +36,7 @@ h1 {
 
 .container {
     display: grid;
-    grid-template-columns: 100px 250px auto;
+    grid-template-columns: 8% 250px auto 8%;
     grid-template-rows: 1fr;
 }
 
@@ -88,7 +92,6 @@ nav a {
 }
 
 .set {
-    margin-right: 100px;
     display: grid;
     grid-gap: 15px;
     grid-template-columns: 5fr 6fr 5fr;
