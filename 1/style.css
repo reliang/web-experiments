@@ -12,10 +12,11 @@ h1 {
     font-size: 34px;
 }
 
-.title {
+.title h1 {
     display: inline-block;
     margin-left: -8px;
     z-index: 0;
+    margin-block-start: 0em;
 }
 
 #does {
@@ -27,8 +28,20 @@ h1 {
     margin-left: -73px;
 }
 
+.reshu {
+    display: inline;
+}
+
 #liang h1 {
     margin-left: -73px;
+}
+
+.mobile-spaces {
+    display: none;
+}
+
+.pc-spaces {
+    display: inline;
 }
 
 #design h1 {
@@ -186,3 +199,119 @@ a.img-link:hover,a.img-link:active {
     font-size: 32px;
     display: inline;
 }
+
+@media screen and (max-width: 1100px) {
+    .set {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .left a {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+    }
+
+    .right a {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+    }
+
+    .left div {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: start;
+    }
+    
+    .right div {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: start;
+        text-align: left;
+    }
+
+    .offset-top-sm a img {
+        margin-top: 0px;
+    }
+    
+    .offset-top-lg a img {
+        margin-top: 0px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 8% auto 8%;
+        grid-template-rows: auto;
+    }
+
+    h1 {
+        font-size: 5.6vw;
+    }
+
+    header {
+        grid-column: 2;
+        grid-row: 1;
+        z-index: 1;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .content {
+        grid-column: 2;
+        grid-row: 1;
+        z-index: 0;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #does {
+        z-index: 2;
+    }
+
+    #does h1 {
+        display: inline;
+        margin-left: 0px;
+    }
+
+    .reshu {
+        display: none;
+    }
+
+    #liang h1 {
+        display: inline;
+        margin-left: 0px;
+    }
+
+    .mobile-spaces {
+        color: rgba(255, 255, 255, 0);
+        display: inline;
+    }
+    
+    .pc-spaces {
+        display: none;
+    }
+
+    .title h1 {
+        display: inline-block;
+        margin-left: 0;
+    }
+
+    #self-portrait {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        margin-bottom: -5%;
+        width: 100%;
+        height: 100%;
+    }
+  }
