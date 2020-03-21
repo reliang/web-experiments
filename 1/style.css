@@ -19,10 +19,20 @@ h1 {
 }
 
 #does {
+    z-index: 1;
+}
+
+#does h1 {
     display: inline;
+    margin-left: -73px;
+}
+
+#liang h1 {
+    margin-left: -73px;
 }
 
 #design h1 {
+    display: inline-block;
     background-color: yellow;
 }
 
@@ -32,6 +42,16 @@ h1 {
 
 #illustration h1 {
     background-color: rgb(255, 45, 161);
+}
+
+#self-portrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5%;
+    margin-bottom: -5%;
+    width: 40%;
+    height: 40%;
 }
 
 .container {
@@ -50,11 +70,6 @@ header {
     grid-column: 2 / 4;
     grid-row: 1;
     z-index: 0;
-}
-
-.catherinedoes {
-    grid-column: 2 / 4;
-    grid-row: 1;
 }
 
 a {
@@ -87,8 +102,10 @@ nav a {
     grid-template-rows: 1fr;
 }
 
-.section {
+.sections {
     grid-column: 1;
+    margin-top: -50px;
+    margin-bottom: -20px;
 }
 
 .set {
@@ -96,26 +113,6 @@ nav a {
     grid-gap: 15px;
     grid-template-columns: 5fr 6fr 5fr;
     grid-template-rows: 1fr;
-}
-
-.left img {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    height: auto;
-    align-self: start;
-}
-
-.bottom img {
-    align-self: end;
-}
-
-.right img {
-    grid-column: 3;
-    grid-row: 1;
-    width: 100%;
-    height: auto;
-    align-self: end;
 }
 
 /* added link */
@@ -145,15 +142,15 @@ a.img-link:hover,a.img-link:active {
     align-self: end;
 }
 
+.right a img {
+    width: 100%;
+    height: auto;
+}
+
 .right a {
     grid-column: 3;
     grid-row: 1;
     align-self: end;
-}
-
-.right a img {
-    width: 100%;
-    height: auto;
 }
 
 .left div {
@@ -175,14 +172,6 @@ a.img-link:hover,a.img-link:active {
 
 .set div p {
     margin-block-end: 0em;
-}
-
-.offset-top-sm img {
-    margin-top: -100px;
-}
-
-.offset-top-lg img {
-    margin-top: -150px;
 }
 
 .offset-top-sm a img {
