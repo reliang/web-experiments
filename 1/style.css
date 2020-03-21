@@ -181,3 +181,8 @@ a.img-link:hover,a.img-link:active {
 .offset-top-lg a img {
     margin-top: -150px;
 }
+
+.font-sm {
+    font-size: 32px;
+    display: inline;
+}
