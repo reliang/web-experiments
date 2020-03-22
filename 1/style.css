@@ -44,6 +44,10 @@ h1 {
     display: inline;
 }
 
+#caretdown {
+    display: none;
+}
+
 #design h1 {
     display: inline-block;
     background-color: yellow;
@@ -79,10 +83,14 @@ h1 {
     top: 5%;
 }
 
-header {
+header.pc {
     grid-column: 2 / 4;
     grid-row: 1;
     z-index: 0;
+}
+
+header.mobile {
+    display: none;
 }
 
 a {
@@ -253,14 +261,45 @@ a.img-link:hover,a.img-link:active {
         font-size: 5.6vw;
     }
 
-    header {
+    header.pc {
+        display: none;
         grid-column: 2;
         grid-row: 1;
-        z-index: 1;
+        z-index: -1;
     }
 
-    nav {
+    header.mobile {
+        display: inherit;
+        position: fixed;
+        top: 5%;
+        width: 84%;
+        margin-left: 8%;
+        margin-right: 8%;
+        z-index: 2;
+    }
+
+    header.mobile h1 {
+        margin-block-start: 0em;
+    }
+
+    header.mobile nav {
+        display: block;
+        background-color: white;
+        border: 2px solid rgb(255, 45, 161);
+        float: right;
+        padding-bottom: 3px;
+    }
+
+    header.mobile nav.hide {
         display: none;
+    }
+
+    header.mobile nav a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-right: 10px;
+        font-size: 18px;
     }
 
     .content {
@@ -289,6 +328,14 @@ a.img-link:hover,a.img-link:active {
     #liang h1 {
         display: inline;
         margin-left: 0px;
+    }
+
+    #caretdown {
+        height: 5vw;
+        top: 0;
+        left: 94%;
+        position: absolute;
+        display: inline-block;
     }
 
     .mobile-spaces {
