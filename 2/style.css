@@ -14,7 +14,7 @@ header {
 
 section {
     height: 100vh;
-    background-size: auto 50vh;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -22,18 +22,38 @@ section {
 }
 
 .design {
-    background-image:url(images/design.png);
-    background-color:yellow;
+    background-image:
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    url(images/design.png);
 }
 
 .graphics {
-    background-image:url(images/graphics.jpg);
+    background-image:
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    url(images/graphics.jpg);
 }
 
 .illustration {
-    background-image:url(images/illustration.png);
+    background-image:
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    url(images/illustration.png);
 }
 
 .about {
-    background-image:url(images/about.jpg);
+    background-image:
+    linear-gradient(
+      rgba(0, 255, 255, 0.45), 
+      rgba(0, 255, 255, 0.45)
+    ),
+    url(images/about.jpg);
 }
