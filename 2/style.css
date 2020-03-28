@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo+2:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+2:600,700&display=swap');
 
 html {
     scroll-snap-type: y mandatory;
@@ -12,15 +12,29 @@ body {
 
 h1 {
     font-size: 2.2em;
-    color: rgb(255, 230, 0);
-    background-color: rgb(44, 199, 183);
-    padding-left: 10px;
-    padding-right: 10px;
+}
+
+h1 mark {
+    background-color: magenta;
+    color: cyan;
 }
 
 img {
     width: 100%;
     height: auto;
+}
+
+a {
+    display: inline-block;
+    text-decoration-style: wavy;
+    text-decoration-color: cyan;
+    color: white;
+}
+
+nav a {
+    padding: 3px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
 header {
@@ -29,18 +43,107 @@ header {
     top: 10px;
 }
 
+section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+.design {
+    background-image:
+    linear-gradient(
+      rgba(255, 0, 0, 0.5), 
+      rgba(255, 0, 0, 0.5)
+    ),
+    url(images/design.jpg);
+}
+
+.design mark {
+    background-color: cyan;
+    color: magenta;
+}
+
+.graphics {
+    background-image:
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(255, 0, 0, 0.5), 
+      rgba(255, 0, 0, 0.5)
+    ),
+    url(images/graphics.jpg);
+}
+
+.graphics mark {
+    background-color: yellow;
+    color: darkturquoise;
+}
+
+.illustration {
+    background-image:
+    linear-gradient(
+      rgba(200, 200, 0, 0.8), 
+      rgba(200, 200, 0, 0.8)
+    ),
+    linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(images/illustration.png);
+}
+
+.illustration mark {
+    background-color: magenta;
+    color: yellow;
+}
+
+.about {
+    background-image:
+    linear-gradient(
+      rgba(0, 255, 255, 0.5), 
+      rgba(0, 255, 255, 0.5)
+    ),
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(images/about.jpg);
+}
+
 .container {
     display: grid;
-    grid-template-columns: 17% auto 13%;
+    grid-template-columns: 13% 140px auto 13%;
     grid-template-rows: 100px auto 60px;
 }
 
+.container div {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.container h2 {
+    grid-column: 3;
+    grid-row: 2;
+    font-size: 4vw;
+}
+
+.container p {
+    font-size: 1.2em;
+}
+
+.container h3 {
+    font-size: 2.8vw;
+}
+
 .projects {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 2;
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.87);
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-column-gap: 40px;
@@ -59,50 +162,4 @@ header {
 .project3 {
     grid-column: 3;
     grid-row: 1;
-}
-
-section {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    scroll-snap-align: start;
-}
-
-.design {
-    background-image:
-    linear-gradient(
-      rgba(255, 0, 0, 0.45), 
-      rgba(255, 0, 0, 0.45)
-    ),
-    url(images/design.jpg);
-}
-
-.graphics {
-    background-image:
-    /* top, transparent red, faked with gradient */ 
-    linear-gradient(
-      rgba(255, 0, 0, 0.45), 
-      rgba(255, 0, 0, 0.45)
-    ),
-    url(images/graphics.jpg);
-}
-
-.illustration {
-    background-image:
-    linear-gradient(
-      rgba(255, 255, 0, 0.4), 
-      rgba(255, 255, 0, 0.4)
-    ),
-    url(images/illustration.png);
-}
-
-.about {
-    background-image:
-    linear-gradient(
-      rgba(0, 255, 255, 0.45), 
-      rgba(0, 255, 255, 0.45)
-    ),
-    url(images/about.jpg);
 }
