@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+2:600,700&display=swap');
 
 html {
+    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
 
@@ -127,7 +128,7 @@ section {
 .container h2 {
     grid-column: 3;
     grid-row: 2;
-    font-size: 4vw;
+    font-size: 3.6vw;
 }
 
 .container p {
@@ -141,25 +142,30 @@ section {
 .projects {
     grid-column: 3;
     grid-row: 2;
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0.87);
-    display: none;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 40px;
+    z-index: 1;
 }
 
-.project1 {
-    grid-column: 1;
-    grid-row: 1;
+.project1, .project2, .project3 {
+    position: absolute;
+    width: 200px;
 }
 
-.project2 {
-    grid-column: 2;
-    grid-row: 1;
+.projectheader {
+    position: absolute;
+    cursor: move;
+    width: 12%;
+    top: 10px;
+    left: 10px;
 }
 
-.project3 {
-    grid-column: 3;
-    grid-row: 1;
+img.horizontal {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+img.vertical {
+    height: 200px;
+    width: auto;
+    object-fit: contain;
 }
