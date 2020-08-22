@@ -1,0 +1,234 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.parallax {
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax_group {
+    position: relative;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    /*transform: translate3d(700px, 0, -800px) rotateY(30deg);*/
+}
+
+/* content */
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /*box-shadow: 0 0 0 2px #000;*/
+}
+
+.project {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+header {
+    margin-left: 16%;
+    margin-right: 16%;
+}
+
+.parallax-content {
+    margin-left: 17%;
+    margin-right: 15%;
+}
+
+/* plane */
+.plane {
+    position: absolute;
+    left: 43%;
+    top: 30%;
+    width: 41%;
+    -webkit-transform: translateZ(60px) scale(0.8);
+    transform: translateZ(60px) scale(0.8);
+    /*box-shadow: 0 0 0 2px #000;*/
+}
+
+/* left cloud */
+.cloud-left {
+    /*display: none;*/
+    position: absolute;
+    top: 115vh;
+    left: 17%;
+    width: 16%;
+    -webkit-transform: translateZ(60px) scale(0.8);
+    transform: translateZ(60px) scale(0.8);
+    /*box-shadow: 0 0 0 2px #000;*/
+}
+
+/* right cloud */
+.cloud-right {
+    /*display: none;*/
+    position: absolute;
+    top: 160vh;
+    right: 17%;
+    width: 14%;
+    -webkit-transform: translateZ(60px) scale(0.8);
+    transform: translateZ(60px) scale(0.8);
+    /*box-shadow: 0 0 0 2px #000;*/
+}
+
+/* moon */
+.moon {
+    position: absolute;
+    left: 42%;
+    top: 20%;
+    width: 45%;
+    -webkit-transform: translateZ(1px);
+    transform: translateZ(1px);
+    /*box-shadow: 0 0 0 2px #000;*/
+}
+
+.parallax-img {
+    width: 100%;
+}
+
+.intro {
+    margin-right: 45%;
+    margin-top: 16vmax;
+    margin-bottom: 16vmax;
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.purple {
+    color: #756491;
+    background-color: inherit;
+}
+
+.blue {
+    color: #7ca1b5;
+    background-color: inherit;
+}
+
+
+.grass {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+/* for almost square or vertical screens */
+@media only screen and (max-aspect-ratio: 16/9) {
+    /* body {
+        background-color: yellow;
+    } */
+    /* left cloud */
+    .cloud-left {
+        top: 102vh;
+    }
+
+    /* right cloud */
+    .cloud-right {
+        top: 130vh;
+    }
+}
+
+/* for extra wide screens */
+@media only screen and (min-aspect-ratio: 16/7) and (min-width: 1050px) {
+    /* body {
+        background-color: pink;
+    } */
+    /* left cloud */
+    .cloud-left {
+        top: 55vw;
+    }
+
+    /* right cloud */
+    .cloud-right {
+        top: 75vw;
+    }
+}
+
+/* for extra wide, small screens */
+@media only screen and (min-aspect-ratio: 16/7) and (max-width: 1100px) {
+    /* body {
+        background-color: red;
+    } */
+    /* left cloud */
+    .cloud-left {
+        display: none;
+    }
+
+    /* right cloud */
+    .cloud-right {
+        display: none;
+    }
+}
+
+/* for extra small screens */
+@media only screen and (max-width: 750px) {
+    /* body {
+        background-color: orange;
+    } */
+
+    header, .parallax-content {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* left cloud */
+    .cloud-left {
+        display: none;
+    }
+
+    /* right cloud */
+    .cloud-right {
+        display: none;
+    }
+
+    /* moon */
+    .moon {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        width: 50%;
+        -webkit-transform: translateX(-50%) translateZ(1px);
+        transform: translateX(-50%) translateZ(1px);
+        /*box-shadow: 0 0 0 2px #000;*/
+    }
+
+    /* plane */
+    .plane {
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        width: 45%;
+        -webkit-transform: translateX(-50%) translateZ(60px) scale(0.8);
+        transform: translateX(-50%) translateZ(60px) scale(0.8);
+        /*box-shadow: 0 0 0 2px #000;*/
+    }
+
+    .intro {
+        margin-right: 0;
+        margin-top: 90%;
+        margin-bottom: 10%;
+        font-weight: 400;
+        font-size: 2em;
+        text-align: center;
+    }
+}
+
+/* for large screens */
+@media only screen and (min-width: 1000px) {
+    .footer {
+        margin-top: 10vw;
+    }
+}
